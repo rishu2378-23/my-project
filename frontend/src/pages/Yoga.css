@@ -1,0 +1,400 @@
+.yoga-page {
+  width: 100%;
+  box-sizing: border-box;
+  animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  color: #1e293b;
+  background-color: transparent;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.yoga-hero {
+  position: relative;
+  height: 65vh;
+  min-height: 480px;
+  background: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?auto=format&fit=crop&q=80&w=1600') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+  overflow: hidden;
+}
+
+.yoga-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(30, 27, 75, 0.75) 100%) !important;
+  backdrop-filter: blur(2px);
+}
+
+.yoga-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.yoga-hero-badge {
+  background: rgba(255, 255, 255, 0.15) !important;
+  backdrop-filter: blur(8px) !important;
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  color: #fff !important;
+  padding: 0.4rem 1.25rem;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.yoga-hero h1 {
+  font-size: 3.5rem;
+  color: #fff !important;
+  background: none !important;
+  -webkit-text-fill-color: #fff !important;
+  margin: 0;
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.15;
+}
+
+.yoga-hero p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9) !important;
+  margin: 0;
+  line-height: 1.7;
+  max-width: 700px;
+}
+
+.yoga-content-container {
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 3.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.yoga-intro-section {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  padding: 2.75rem 2.5rem;
+  border-radius: 20px !important;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  position: relative;
+}
+
+.yoga-intro-badge {
+  display: inline-block;
+  background: rgba(124, 58, 237, 0.12);
+  color: #7c3aed;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.35rem 1rem;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.yoga-intro-section h2 {
+  font-size: 2.25rem;
+  background: linear-gradient(135deg, #1e293b 0%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.yoga-intro-section p {
+  font-size: 1.1rem;
+  color: #64748b;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+}
+
+.section-header h2 {
+  font-size: 2.25rem;
+  background: linear-gradient(135deg, #1e293b 0%, #4f46e5 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  font-size: 1.05rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.yoga-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.benefit-card {
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: 20px !important;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.09);
+  border-color: #7c3aed !important;
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+.benefit-icon {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
+}
+
+.benefit-card h3 {
+  color: #1e293b;
+  margin-bottom: 0.75rem;
+  font-size: 1.25rem;
+}
+
+.benefit-card p {
+  color: #64748b;
+  margin: 0;
+  line-height: 1.65;
+  font-size: 0.95rem;
+}
+
+.levels-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.level-feature-card {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 0;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.9) !important;
+  border-radius: 20px !important;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+  transition: all 0.35s ease;
+  max-width: 1060px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.level-feature-card:hover {
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.09);
+  border-color: #7c3aed !important;
+}
+
+.level-feature-card.reverse {
+  grid-template-columns: 1fr 1.1fr;
+}
+
+.level-feature-card.reverse .level-image-wrapper {
+  order: 2;
+}
+
+.level-feature-card.reverse .level-text-content {
+  order: 1;
+}
+
+.level-image-wrapper {
+  position: relative;
+  height: 330px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.level-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.level-feature-card:hover .level-image-wrapper img {
+  transform: scale(1.04);
+}
+
+.level-tag {
+  position: absolute;
+  top: 1.25rem;
+  left: 1.25rem;
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  padding: 0.4rem 1rem;
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.level-text-content {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.85rem;
+}
+
+.level-subtitle {
+  color: #7c3aed;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.level-text-content h3 {
+  font-size: 1.85rem;
+  color: #1e293b;
+  margin: 0;
+}
+
+.level-text-content p {
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0 0 0.5rem 0;
+}
+
+.yoga-cta-section {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 4rem 2.5rem;
+  text-align: center;
+  background: linear-gradient(135deg, #1e293b 0%, #312e81 100%) !important;
+  color: #fff;
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+.yoga-cta-content {
+  position: relative;
+  z-index: 2;
+  max-width: 700px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.yoga-cta-content h2 {
+  font-size: 2.5rem;
+  color: #fff;
+  margin: 0;
+  background: none !important;
+  -webkit-text-fill-color: #fff !important;
+}
+
+.yoga-cta-content p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.85rem 2.25rem;
+  border-radius: 50px !important;
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 25px rgba(109, 40, 217, 0.35);
+  cursor: pointer;
+  background: linear-gradient(135deg, #6d28d9 0%, #2563eb 100%) !important;
+  color: #fff !important;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(109, 40, 217, 0.5) !important;
+}
+
+.yoga-cta-section .cta-button.primary {
+  background: rgba(255, 255, 255, 0.9) !important;
+  color: #1e293b !important;
+}
+
+.yoga-cta-section .cta-button.primary:hover {
+  background: #fff !important;
+  color: #1e293b !important;
+  transform: translateY(-3px);
+}
+
+@media (max-width: 900px) {
+  .yoga-hero h1 {
+    font-size: 2.5rem;
+  }
+  
+  .level-feature-card,
+  .level-feature-card.reverse {
+    grid-template-columns: 1fr;
+  }
+  
+  .level-feature-card.reverse .level-image-wrapper {
+    order: 1;
+  }
+  
+  .level-feature-card.reverse .level-text-content {
+    order: 2;
+  }
+
+  .level-image-wrapper {
+    height: 260px;
+  }
+  
+  .level-text-content {
+    padding: 2rem 1.5rem;
+  }
+}

@@ -1,0 +1,188 @@
+.receipt-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(19, 48, 34, 0.65);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  padding: 1rem;
+  animation: fadeIn 0.3s ease;
+}
+
+.receipt-modal-content {
+  background-color: var(--ivory-cream, #f7f5f0);
+  border: 1px solid var(--warm-beige, #dce5de);
+  border-radius: var(--radius-lg, 24px);
+  width: 100%;
+  max-width: 520px;
+  max-height: 85vh;
+  box-shadow: 0 10px 40px rgba(19, 48, 34, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.receipt-header {
+  background-color: var(--forest-green, #1e4632);
+  color: #fff;
+  padding: 1.75rem 1.5rem;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.receipt-header h2 {
+  color: #fff;
+  margin: 0 0 0.25rem 0;
+  font-size: 1.4rem;
+  letter-spacing: -0.01em;
+}
+
+.receipt-header p {
+  color: var(--ivory-cream, #f7f5f0);
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.receipt-scrollable-area {
+  overflow-y: auto;
+  flex-grow: 1;
+  padding: 1.25rem;
+}
+
+.receipt-body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  background-color: #fff;
+  border-radius: var(--radius, 14px);
+  border: 1px solid var(--warm-beige, #dce5de);
+  box-shadow: var(--shadow-subtle);
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px dashed var(--warm-beige, #dce5de);
+}
+
+.receipt-row:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.receipt-label {
+  font-weight: 600;
+  color: var(--forest-green, #1e4632);
+  font-size: 0.9rem;
+}
+
+.receipt-value {
+  color: var(--muted-text, #4f5a52);
+  font-size: 0.9rem;
+  text-align: right;
+}
+
+.status-booked {
+  color: var(--natural-green, #739e7d);
+  font-weight: 600;
+}
+
+.receipt-footer-text {
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+}
+
+.receipt-footer-text p {
+  color: var(--muted-text, #4f5a52);
+  font-size: 0.85rem;
+  font-style: italic;
+  margin: 0;
+}
+
+.receipt-actions {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background-color: var(--light-green, #edf3ee);
+  border-top: 1px solid var(--warm-beige, #dce5de);
+  flex-shrink: 0;
+}
+
+.receipt-actions .btn {
+  flex: 1;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  border-radius: var(--radius, 14px);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-download {
+  background-color: var(--natural-green, #739e7d);
+  color: #fff;
+}
+.btn-download:hover {
+  background-color: var(--natural-green-dark, #587c61);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle);
+}
+
+.btn-close {
+  background-color: var(--embrace-deep, #133022);
+  color: #fff;
+}
+.btn-close:hover {
+  background-color: var(--forest-green, #1e4632);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-subtle);
+}
+
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .receipt-modal-overlay, .receipt-modal-overlay * {
+    visibility: visible;
+  }
+  .receipt-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: white !important;
+    backdrop-filter: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+  }
+  .receipt-modal-content {
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    max-height: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+  }
+  .receipt-scrollable-area {
+    overflow: visible !important;
+    max-height: none !important;
+  }
+  .receipt-actions {
+    display: none !important;
+  }
+}

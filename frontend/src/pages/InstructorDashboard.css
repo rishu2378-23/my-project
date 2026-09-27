@@ -1,0 +1,90 @@
+.instructor-dashboard {
+  padding: 3rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  animation: fadeIn 0.5s ease;
+}
+
+.instructor-dashboard h1 {
+  color: var(--dark-green);
+  font-size: 2.25rem;
+  margin-bottom: 2rem;
+}
+
+.instructor-dashboard section {
+  margin-bottom: 3rem;
+  background-color: var(--cream-card);
+  border: 1px solid var(--warm-beige);
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-subtle);
+}
+
+.instructor-dashboard h2 {
+  color: var(--dark-green);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.class-form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.class-form textarea {
+  grid-column: 1 / -1;
+  resize: vertical;
+  min-height: 100px;
+}
+
+.class-form button {
+  grid-column: 1 / -1;
+  background-color: var(--sage-green);
+  color: white;
+  padding: 0.85rem;
+  border-radius: var(--radius);
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: var(--shadow-subtle);
+}
+
+.class-form button:hover {
+  background-color: var(--sage-dark);
+  box-shadow: var(--shadow-hover);
+}
+
+.class-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.class-item {
+  background: #fff;
+  border: 1px solid var(--warm-beige);
+  padding: 1.5rem;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-subtle);
+  transition: all 0.3s ease;
+}
+
+.class-item:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--sage-green);
+}
+
+.class-item h3 {
+  color: var(--dark-green);
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+.class-item p {
+  color: var(--muted-text);
+  margin: 0;
+}
